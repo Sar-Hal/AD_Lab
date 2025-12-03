@@ -1,0 +1,11 @@
+1. WAP in python to perform the addition of two integers and display the result.
+2. WAP in python to calculate the area of a circle.
+3. WAP in python to convert given paisa into its equivalent rupee and paisa as per the
+following format.
+Example. 550 paisa = 5 Rupee and 50 paisa
+4. WAP in python to find the largest between two numbers.
+5. WAP in python to test whether a number entered through keyboard is ODD or EVEN.
+6. WAP in python to determine whether a year entered through the keyboard is a leap
+year or not.
+7. WAP in python to display the grade system of KIIT University based on total marks
+secured by a student in a semester. Use else..if ladder statement.
