@@ -1,0 +1,15 @@
+WAP to find Precision , Recall , F1 Score for each class 
+                Pred
+              a   b   c   d
+          a   6   0   1   2
+Actual    b   3   9   1   1
+          c   1   0   10  2
+          d   1   2   1   12
+
+
+Example Confusion Matrix
+
+                Pred
+            Yes     No
+        Yes  TP     FN
+Actual  No   FP     TN
