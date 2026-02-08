@@ -1,0 +1,674 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DSpace at My University: Search</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="Generator" content="DSpace 6.2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/dspace/favicon.ico" type="image/x-icon"/>
+	    <link rel="stylesheet" href="/dspace/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
+	    <link rel="stylesheet" href="/dspace/static/css/bootstrap/bootstrap.min.css" type="text/css" />
+	    <link rel="stylesheet" href="/dspace/static/css/bootstrap/bootstrap-theme.min.css" type="text/css" />
+	    <link rel="stylesheet" href="/dspace/static/css/bootstrap/dspace-theme.css" type="text/css" />
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/dspace/open-search/description.xml" title="DSpace"/>
+
+        
+	<script type='text/javascript' src="/dspace/static/js/jquery/jquery-1.10.2.min.js"></script>
+	<script type='text/javascript' src='/dspace/static/js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+	<script type='text/javascript' src='/dspace/static/js/bootstrap/bootstrap.min.js'></script>
+	<script type='text/javascript' src='/dspace/static/js/holder.js'></script>
+	<script type="text/javascript" src="/dspace/utils.js"></script>
+    <script type="text/javascript" src="/dspace/static/js/choice-support.js"> </script>
+
+    
+    
+		<script type="text/javascript">
+	var jQ = jQuery.noConflict();
+	jQ(document).ready(function() {
+		jQ( "#spellCheckQuery").click(function(){
+			jQ("#query").val(jQ(this).attr('data-spell'));
+			jQ("#main-query-submit").click();
+		});
+		jQ( "#filterquery" )
+			.autocomplete({
+				source: function( request, response ) {
+					jQ.ajax({
+						url: "/dspace/json/discovery/autocomplete?query=Team+Effectiveness",
+						dataType: "json",
+						cache: false,
+						data: {
+							auto_idx: jQ("#filtername").val(),
+							auto_query: request.term,
+							auto_sort: 'count',
+							auto_type: jQ("#filtertype").val(),
+							location: ''	
+						},
+						success: function( data ) {
+							response( jQ.map( data.autocomplete, function( item ) {
+								var tmp_val = item.authorityKey;
+								if (tmp_val == null || tmp_val == '')
+								{
+									tmp_val = item.displayedValue;
+								}
+								return {
+									label: item.displayedValue + " (" + item.count + ")",
+									value: tmp_val
+								};
+							}))			
+						}
+					})
+				}
+			});
+	});
+	function validateFilters() {
+		return document.getElementById("filterquery").value.length > 0;
+	}
+</script>
+		
+    
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/dspace/static/js/html5shiv.js"></script>
+  <script src="/dspace/static/js/respond.min.js"></script>
+<![endif]-->
+    </head>
+
+    
+    
+    <body class="undernavigation">
+<a class="sr-only" href="#content">Skip navigation</a>
+<header class="navbar navbar-inverse navbar-fixed-top">    
+    
+            <div class="container">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/dspace/"><img height="25" src="/dspace/image/dspace-logo-only.png" alt="DSpace logo" /></a>
+       </div>
+       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+         <ul class="nav navbar-nav">
+           <li class=""><a href="/dspace/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b></a>
+             <ul class="dropdown-menu">
+               <li><a href="/dspace/community-list">Communities<br/>&amp;&nbsp;Collections</a></li>
+				<li class="divider"></li>
+        <li class="dropdown-header">Browse Items by:</li>
+				
+				
+				
+				      			<li><a href="/dspace/browse?type=dateissued">Issue Date</a></li>
+					
+				      			<li><a href="/dspace/browse?type=author">Author</a></li>
+					
+				      			<li><a href="/dspace/browse?type=title">Title</a></li>
+					
+				      			<li><a href="/dspace/browse?type=subject">Subject</a></li>
+					
+				    
+				
+
+            </ul>
+          </li>
+          <li class=""><script type="text/javascript">
+<!-- Javascript starts here
+document.write('<a href="#" onClick="var popupwin = window.open(\'/dspace/help/index.html\',\'dspacepopup\',\'height=600,width=550,resizable,scrollbars\');popupwin.focus();return false;">Help<\/a>');
+// -->
+</script><noscript><a href="/dspace/help/index.html" target="dspacepopup">Help</a></noscript></li>
+       </ul>
+
+ 
+ 
+       <div class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+         
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Sign on to: <b class="caret"></b></a>
+	             
+             <ul class="dropdown-menu">
+               <li><a href="/dspace/mydspace">My DSpace</a></li>
+               <li><a href="/dspace/subscribe">Receive email<br/>updates</a></li>
+               <li><a href="/dspace/profile">Edit Profile</a></li>
+
+		
+             </ul>
+           </li>
+          </ul>
+          
+	
+	<form method="get" action="/dspace/simple-search" class="navbar-form navbar-right">
+	    <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search&nbsp;DSpace" name="query" id="tequery" size="25"/>
+        </div>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+
+	</form></div>
+    </nav>
+
+            </div>
+
+</header>
+
+<main id="content" role="main">
+<div class="container banner">
+	<div class="row">
+	<!--	<div class="col-md-9 brand">
+		<h1>DSpace <small>JSPUI</small></h1>
+        <h4>DSpace preserves and enables easy and open access to all types of digital content including text, images, moving images, mpegs and data sets</h4> <a href="http://www.dspace.org" class="btn btn-primary">Learn More</a> 
+        </div>
+        <div class="col-md-3"><img class="pull-right" src="/dspace/image/logo.gif">  -->
+		
+		<div><a class="navbar-brand" href="/dspace/" style="padding: 0px;    margin-left: -13px;    height: 179px;    margin-top: -24px;"  ><center><img src="/dspace/image/banner3.png" alt="KIIT logo" width="103%" /></center></a>
+        </div>
+        </div>
+	</div>
+</div>	
+
+                
+
+<div class="container">
+                
+
+
+
+  
+
+<ol class="breadcrumb btn-success">
+
+  <li><a href="/dspace/">DSpace at My University</a></li>
+
+</ol>
+
+</div>                
+
+
+
+        
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-9">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<h2>Search</h2>
+
+<div class="discovery-search-form panel panel-default">
+    
+	<div class="discovery-query panel-heading">
+    <form action="simple-search" method="get">
+        <label for="tlocation">
+         	Search:
+        </label>
+        <select name="location" id="tlocation">
+
+            
+            <option selected="selected" value="/">All of DSpace</option>
+
+            <option value="123456789/20" >
+                Kalinga Institute of Dental Sciences (KIDS)
+            </option>
+
+            <option value="123456789/19" >
+                Kalinga Institute of Medical Sciences (KIMS)
+            </option>
+
+            <option value="123456789/21" >
+                Kalinga Institute of Nursing Sciences (KINS)
+            </option>
+
+            <option value="123456789/5795" >
+                Kalinga Institute of Social Sciences (KISS)
+            </option>
+
+            <option value="123456789/212" >
+                KIIT International School
+            </option>
+
+            <option value="123456789/7319" >
+                KIIT Polytechnic (KP)
+            </option>
+
+            <option value="123456789/18" >
+                KIIT School of Law
+            </option>
+
+            <option value="123456789/4826" >
+                School of Architecture & Planning
+            </option>
+
+            <option value="123456789/16" >
+                School of Biotechnology
+            </option>
+
+            <option value="123456789/9" >
+                School of Computer Applications
+            </option>
+
+            <option value="123456789/10" >
+                School of Engineering
+            </option>
+
+            <option value="123456789/23" >
+                School of Fashion Technology
+            </option>
+
+            <option value="123456789/22" >
+                School of Film & Media Sciences
+            </option>
+
+            <option value="123456789/25" >
+                School of Languages
+            </option>
+
+            <option value="123456789/8" >
+                School of Management
+            </option>
+
+            <option value="123456789/6513" >
+                School of Mass Communication(SMC)
+            </option>
+
+            <option value="123456789/20634" >
+                School of Pharmacy
+            </option>
+
+            <option value="123456789/7953" >
+                School of Public Health (SPH)
+            </option>
+
+            <option value="123456789/17" >
+                School of Rural Management
+            </option>
+
+            <option value="123456789/24" >
+                School of Sculpture
+            </option>
+
+            <option value="123456789/12605" >
+                School of Social, Financial and Human Sciences
+            </option>
+
+            <option value="123456789/27" >
+                School of Yoga & Spiritualism
+            </option>
+
+        </select><br/>
+        <label for="query">for</label>
+        <input type="text" size="50" id="query" name="query" value="Team&#x20;Effectiveness"/>
+        <input type="submit" id="main-query-submit" class="btn btn-primary" value="Go" />
+                  
+        <input type="hidden" value="10" name="rpp" />
+        <input type="hidden" value="score" name="sort_by" />
+        <input type="hidden" value="desc" name="order" />
+
+<a class="btn btn-default" href="/dspace/simple-search">Start a new search</a>	
+		</form>
+		</div>
+
+		<div class="discovery-search-filters panel-body">
+		<h5>Add filters:</h5>
+		<p class="discovery-search-filters-hint">Use filters to refine the search results.</p>
+		<form action="simple-search" method="get">
+		<input type="hidden" value="" name="location" />
+		<input type="hidden" value="Team&#x20;Effectiveness" name="query" />
+		
+		<select id="filtername" name="filtername">
+		<option value="title">Title</option><option value="author">Author</option><option value="subject">Subject</option><option value="dateIssued">Date Issued</option><option value="has_content_in_original_bundle">Has File(s)</option>
+		</select>
+		<select id="filtertype" name="filtertype">
+		<option value="equals">Equals</option><option value="contains">Contains</option><option value="authority">ID</option><option value="notequals">Not Equals</option><option value="notcontains">Not Contains</option><option value="notauthority">Not ID</option>
+		</select>
+		<input type="text" id="filterquery" name="filterquery" size="45" required="required" />
+		<input type="hidden" value="10" name="rpp" />
+		<input type="hidden" value="score" name="sort_by" />
+		<input type="hidden" value="desc" name="order" />
+		<input class="btn btn-default" type="submit" value="Add" onclick="return validateFilters()" />
+		</form>
+		</div>        
+
+        
+   <div class="discovery-pagination-controls panel-footer">
+   <form action="simple-search" method="get">
+   <input type="hidden" value="" name="location" />
+   <input type="hidden" value="Team&#x20;Effectiveness" name="query" />
+		
+           <label for="rpp">Results/Page</label>
+           <select name="rpp" id="rpp">
+
+                   <option value="5" >5</option>
+
+                   <option value="10" selected="selected">10</option>
+
+                   <option value="15" >15</option>
+
+                   <option value="20" >20</option>
+
+                   <option value="25" >25</option>
+
+                   <option value="30" >30</option>
+
+                   <option value="35" >35</option>
+
+                   <option value="40" >40</option>
+
+                   <option value="45" >45</option>
+
+                   <option value="50" >50</option>
+
+                   <option value="55" >55</option>
+
+                   <option value="60" >60</option>
+
+                   <option value="65" >65</option>
+
+                   <option value="70" >70</option>
+
+                   <option value="75" >75</option>
+
+                   <option value="80" >80</option>
+
+                   <option value="85" >85</option>
+
+                   <option value="90" >90</option>
+
+                   <option value="95" >95</option>
+
+                   <option value="100" >100</option>
+
+           </select>
+           &nbsp;|&nbsp;
+
+               <label for="sort_by">Sort items by</label>
+               <select name="sort_by" id="sort_by">
+                   <option value="score">Relevance</option>
+ <option value="dc.title_sort" >Title</option> <option value="dc.date.issued_dt" >Issue Date</option>
+               </select>
+
+           <label for="order">In order</label>
+           <select name="order" id="order">
+               <option value="ASC" >Ascending</option>
+               <option value="DESC" selected="selected">Descending</option>
+           </select>
+           <label for="etal">Authors/record</label>
+           <select name="etal" id="etal">
+
+               <option value="0" selected="selected">All</option>
+<option value="1" >1</option>
+                       <option value="5" >5</option>
+
+                       <option value="10" >10</option>
+
+                       <option value="15" >15</option>
+
+                       <option value="20" >20</option>
+
+                       <option value="25" >25</option>
+
+                       <option value="30" >30</option>
+
+                       <option value="35" >35</option>
+
+                       <option value="40" >40</option>
+
+                       <option value="45" >45</option>
+
+                       <option value="50" >50</option>
+
+           </select>
+           <input class="btn btn-default" type="submit" name="submit_search" value="Update" />
+
+
+</form>
+   </div>
+</div>   
+
+<hr/>
+<div class="discovery-result-pagination row container">
+
+    
+	<div class="alert alert-info">Results 1-10 of 23 (Search time: 0.004 seconds).</div>
+    <ul class="pagination pull-right">
+	<li class="disabled"><span>previous</span></li>
+	
+	<li class="active"><span>1</span></li>
+
+	
+	
+	<li><a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;start=10">2</a></li>
+
+	
+	
+	<li><a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;start=20">3</a></li>
+
+	<li><a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;start=10">next</a></li>
+	</ul>
+<!-- give a content to the div -->
+</div>
+<div class="discovery-result-results">
+
+
+
+
+
+    <div class="panel panel-info">
+    <div class="panel-heading">Item hits:</div>
+    <table align="center" class="table" summary="This table browses all dspace content">
+<colgroup><col width="130" /><col width="60%" /><col width="40%" /></colgroup>
+<tr>
+<th id="t1" class="oddRowEvenCol">Issue Date</th><th id="t2" class="oddRowOddCol">Title</th><th id="t3" class="oddRowEvenCol">Author(s)</th></tr><tr><td headers="t1" ><em>2014-01</em></td><td headers="t2" ><a href="/dspace/handle/123456789/3442">Quiz&#x20;as&#x20;a&#x20;teaching&#x20;and&#x20;learning&#x20;method&#x20;in&#x20;Community&#x20;Medicine&#x20;A&#x20;report&#x20;of&#x20;the&#x20;second&#x20;state&#x20;level&#x20;IAPSM&#x20;Quiz&#x20;in&#x20;Puducherry</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Behera%2C+Basanta+Kumar">Behera,&#x20;Basanta&#x20;Kumar</a></em></td></tr>
+<tr><td headers="t1" ><em>2024-04-25</em></td><td headers="t2" ><a href="/dspace/handle/123456789/18921">EXPANSION&#x20;STRATEGIES&#x20;FOR&#x20;LARGE&#x20;VOLUME&#x20;PARENTERALS&#x20;(100ml&#x20;infusions)&#x20;IN&#x20;THE&#x20;CURRENT&#x20;MARKET</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Acharya%2C+Subhranshu">Acharya,&#x20;Subhranshu</a></em></td></tr>
+<tr><td headers="t1" ><em>2024-04-29</em></td><td headers="t2" ><a href="/dspace/handle/123456789/18875">Study&#x20;of&#x20;Shelf&#x20;Life&#x20;of&#x20;Vitamins&#x20;&amp;&#x20;Minerals&#x20;Salts,&#x20;and&#x20;Specification&#x20;&amp;&#x20;Mapping&#x20;according&#x20;to&#x20;the&#x20;FCC</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=SHRIVASTA%2C+SHARMISTHA">SHRIVASTA,&#x20;SHARMISTHA</a></em></td></tr>
+<tr><td headers="t1" ><em>2024-04-28</em></td><td headers="t2" ><a href="/dspace/handle/123456789/18841">Specification&#x20;Mapping,&#x20;and&#x20;Defining&#x20;Maturation&#x20;Timelines&#x20;of&#x20;Flavor&#x20;Ingredients&#x20;and&#x20;Updation&#x20;in&#x20;Business&#x20;Central&#x20;Dynamics&#x20;365.</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Mishra%2C+Mimansa">Mishra,&#x20;Mimansa</a></em></td></tr>
+<tr><td headers="t1" ><em>2018</em></td><td headers="t2" ><a href="/dspace/handle/123456789/10032">Effect&#x20;of&#x20;Intrinsic&#x20;Motivation&#x20;on&#x20;Employee&#x20;Retention&#x20;of&#x20;Indian&#x20;Gen&#x20;Y&#x20;Software&#x20;Professionals</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Mishra%2C+Swati">Mishra,&#x20;Swati</a></em></td></tr>
+<tr><td headers="t1" ><em>2024</em></td><td headers="t2" ><a href="/dspace/handle/123456789/20742">FACTORS&#x20;AFFECTING&#x20;THE&#x20;IMPLEMENTATION&#x20;OF&#x20;CRITICAL&#x20;CHAIN&#x20;PROJECT&#x20;MANAGEMENT&#x20;(CCPM)</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Jena%2C+Bimal+Krushna">Jena,&#x20;Bimal&#x20;Krushna</a></em></td></tr>
+<tr><td headers="t1" ><em>2014-09</em></td><td headers="t2" ><a href="/dspace/handle/123456789/4031">Involvement&#x20;of&#x20;Supplier&#x20;is&#x20;a&#x20;Vaccine&#x20;to&#x20;Enhance&#x20;New&#x20;Product&#x20;Development&#x20;Performance</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Tripathy%2C+Sushant+%2CKumar">Tripathy,&#x20;Sushant&#x20;,Kumar</a></em></td></tr>
+<tr><td headers="t1" ><em>2024-04-29</em></td><td headers="t2" ><a href="/dspace/handle/123456789/18874">COMPREHENSIVE&#x20;MARKET&#x20;ANALYSIS&#x20;OF&#x20;&#x20;GLOBAL&#x20;MARKET</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=ROY%2C+SHALINI">ROY,&#x20;SHALINI</a></em></td></tr>
+<tr><td headers="t1" ><em>2023-10</em></td><td headers="t2" ><a href="/dspace/handle/123456789/16482">STUDY&#x20;OF&#x20;THE&#x20;EFFECTIVENESS&#x20;OF&#x20;TECHNOLOGY&#x20;&#x20;BUSINESS&#x20;INCUBATOR&#x20;SUCCESS&#x20;FACTORS</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=NAYAK%2C+PRIYABRATA">NAYAK,&#x20;PRIYABRATA</a></em></td></tr>
+<tr><td headers="t1" ><em>2023-04-29</em></td><td headers="t2" ><a href="/dspace/handle/123456789/17854">Introduction&#x20;of&#x20;newer&#x20;strategies&#x20;for&#x20;the&#x20;highest&#x20;implementation&#x20;of&#x20;delayed&#x20;umbilical&#x20;cord&#x20;clamping&#x20;after&#x20;caesarean&#x20;birth&#x20;–&#x20;A&#x20;quality&#x20;improvement&#x20;study</a></td><td headers="t3" ><em><a href="/dspace/browse?type=author&amp;value=Panda%2C+Santosh+Kumar">Panda,&#x20;Santosh&#x20;Kumar</a>; <a href="/dspace/browse?type=author&amp;value=Gudu%2C+Rama+Krushna">Gudu,&#x20;Rama&#x20;Krushna</a>; <a href="/dspace/browse?type=author&amp;value=Dhanawat%2C+Avantika">Dhanawat,&#x20;Avantika</a>; <a href="/dspace/browse?type=author&amp;value=Behura%2C+Sushree+Smita">Behura,&#x20;Sushree&#x20;Smita</a></em></td></tr>
+</table>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+	</div>
+	<div class="col-md-3">
+                    
+
+
+<h3 class="facets">Discover</h3>
+<div id="facets" class="facetsBox">
+
+<div id="facet_author" class="panel panel-success">
+	    <div class="panel-heading">Author</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Acharya%2C+Subhranshu&amp;filtertype=equals"
+                title="Filter by Acharya, Subhranshu">
+                Acharya, Subhranshu</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=AKRITI%2C+KUMARI&amp;filtertype=equals"
+                title="Filter by AKRITI, KUMARI">
+                AKRITI, KUMARI</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Basu%2C+Supriya&amp;filtertype=equals"
+                title="Filter by Basu, Supriya">
+                Basu, Supriya</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Behera%2C+Basanta+Kumar&amp;filtertype=equals"
+                title="Filter by Behera, Basanta Kumar">
+                Behera, Basanta Kumar</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Behera%2C+Rajat+Kumar&amp;filtertype=equals"
+                title="Filter by Behera, Rajat Kumar">
+                Behera, Rajat Kumar</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Behura%2C+Sushree+Smita&amp;filtertype=equals"
+                title="Filter by Behura, Sushree Smita">
+                Behura, Sushree Smita</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Bhattacharjee%2C+Sourav&amp;filtertype=equals"
+                title="Filter by Bhattacharjee, Sourav">
+                Bhattacharjee, Sourav</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Biswal%2C+Seva&amp;filtertype=equals"
+                title="Filter by Biswal, Seva">
+                Biswal, Seva</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Dhanawat%2C+Avantika&amp;filtertype=equals"
+                title="Filter by Dhanawat, Avantika">
+                Dhanawat, Avantika</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=author&amp;filterquery=Gudu%2C+Rama+Krushna&amp;filtertype=equals"
+                title="Filter by Gudu, Rama Krushna">
+                Gudu, Rama Krushna</a></li><li class="list-group-item"><span style="visibility: hidden;">.</span>
+	        
+            
+            <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;author_page=1"><span class="pull-right">next ></span></a>
+            </li></ul></div><div id="facet_subject" class="panel panel-success">
+	    <div class="panel-heading">Subject</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Accomplishment&amp;filtertype=equals"
+                title="Filter by Accomplishment">
+                Accomplishment</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Acute+gastrointestinal+injury&amp;filtertype=equals"
+                title="Filter by Acute gastrointestinal injury">
+                Acute gastrointestinal injury</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=APACHE+II+score&amp;filtertype=equals"
+                title="Filter by APACHE II score">
+                APACHE II score</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Authorisation+Committee&amp;filtertype=equals"
+                title="Filter by Authorisation Committee">
+                Authorisation Committee</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Behavioral+Profile&amp;filtertype=equals"
+                title="Filter by Behavioral Profile">
+                Behavioral Profile</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Caesarean+Section&amp;filtertype=equals"
+                title="Filter by Caesarean Section">
+                Caesarean Section</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Collaborative+product+development&amp;filtertype=equals"
+                title="Filter by Collaborative product development">
+                Collaborative product development</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Community+Medicine%2C&amp;filtertype=equals"
+                title="Filter by Community Medicine,">
+                Community Medicine,</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=Continuous+Glucose+Monitoring&amp;filtertype=equals"
+                title="Filter by Continuous Glucose Monitoring">
+                Continuous Glucose Monitoring</a></li><li class="list-group-item"><span class="badge">1</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=subject&amp;filterquery=COVID-19&amp;filtertype=equals"
+                title="Filter by COVID-19">
+                COVID-19</a></li><li class="list-group-item"><span style="visibility: hidden;">.</span>
+	        
+            
+            <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;subject_page=1"><span class="pull-right">next ></span></a>
+            </li></ul></div><div id="facet_dateIssued" class="panel panel-success">
+	    <div class="panel-heading">Date issued</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">17</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=dateIssued&amp;filterquery=%5B2020+TO+2026%5D&amp;filtertype=equals"
+                title="Filter by 2020 - 2026">
+                2020 - 2026</a></li><li class="list-group-item"><span class="badge">6</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=dateIssued&amp;filterquery=%5B2010+TO+2019%5D&amp;filtertype=equals"
+                title="Filter by 2010 - 2019">
+                2010 - 2019</a></li></ul></div><div id="facet_has_content_in_original_bundle" class="panel panel-success">
+	    <div class="panel-heading">Has File(s)</div>
+	    <ul class="list-group"><li class="list-group-item"><span class="badge">23</span> <a href="/dspace/simple-search?query=Team+Effectiveness&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=0&amp;filtername=has_content_in_original_bundle&amp;filterquery=true&amp;filtertype=equals"
+                title="Filter by true">
+                true</a></li></ul></div>
+
+</div>
+
+
+    </div>
+    </div>       
+
+</div>
+</main>
+            
+             <footer class="navbar navbar-inverse navbar-bottom">
+             <div id="designedby" class="container text-muted">
+             Theme by <a href="http://www.cineca.it"><img
+                                    src="/dspace/image/logo-cineca-small.png"
+                                    alt="Logo CINECA" /></a>
+			<div id="footer_feedback" class="pull-right">                                    
+                                <p class="text-muted"><a target="_blank" href="http://www.dspace.org/">DSpace Software</a> Copyright&nbsp;&copy;&nbsp;2002-2013&nbsp; <a target="_blank" href="http://www.duraspace.org/">Duraspace</a>&nbsp;-
+                                <a target="_blank" href="/dspace/feedback">Feedback</a>
+                                <a href="/dspace/htmlmap"></a></p>
+                                </div>
+			</div>
+    </footer>
+    </body>
+</html>

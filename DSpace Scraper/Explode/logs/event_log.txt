@@ -1,0 +1,104 @@
+[2026-02-08 15:31:20] SEARCH TERM → HS 30225
+[2026-02-08 15:31:20] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=HS+30225
+[2026-02-08 15:31:21] EXTRACT ITEM LINKS → Found 0 from HS 30225
+[2026-02-08 15:31:21] SEARCH TERM → HS30225
+[2026-02-08 15:31:21] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=HS30225
+[2026-02-08 15:31:21] EXTRACT ITEM LINKS → Found 0 from HS30225
+[2026-02-08 15:31:22] SEARCH TERM → 30225
+[2026-02-08 15:31:22] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=30225
+[2026-02-08 15:31:22] EXTRACT ITEM LINKS → Found 0 from 30225
+[2026-02-08 15:31:22] SEARCH TERM → Leadership
+[2026-02-08 15:31:22] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=Leadership
+[2026-02-08 15:31:22] EXTRACT ITEM LINKS → Found 10 from Leadership
+[2026-02-08 15:31:23] SEARCH TERM → Team Effectiveness
+[2026-02-08 15:31:23] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=Team+Effectiveness
+[2026-02-08 15:31:23] EXTRACT ITEM LINKS → Found 10 from Team Effectiveness
+[2026-02-08 15:31:23] SEARCH TERM → Leadership Team
+[2026-02-08 15:31:23] REQUEST → http://10.2.0.84:8080/dspace/simple-search?query=Leadership+Team
+[2026-02-08 15:31:24] EXTRACT ITEM LINKS → Found 8 from Leadership Team
+[2026-02-08 15:31:24] TOTAL UNIQUE ITEMS → 26
+[2026-02-08 15:31:24] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/18875
+[2026-02-08 15:31:24] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/18875
+[2026-02-08 15:31:24] CHECK FILE → 1960103 -SHARMISTHA SHRIVASTAVA.pdf | MATCH = False
+[2026-02-08 15:31:25] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/20882
+[2026-02-08 15:31:25] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/20882
+[2026-02-08 15:31:25] CHECK FILE → Namita Priya.pdf | MATCH = False
+[2026-02-08 15:31:25] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/18921
+[2026-02-08 15:31:25] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/18921
+[2026-02-08 15:31:25] CHECK FILE → 1960132 Subhranshu Acharya Dissertation Thesis - SUBHRANSHU ACHARYA (1).pdf | MATCH = False
+[2026-02-08 15:31:26] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/5731
+[2026-02-08 15:31:26] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/5731
+[2026-02-08 15:31:26] CHECK FILE → 6th Semester BBA-Leadership in Organisation-BM-3102-Spring End Semester Examination-2016(Regular 2013-16 Admitted Batch & Back).pdf | MATCH = True
+[2026-02-08 15:31:26] DOWNLOAD SUCCESS → 6th Semester BBA-Leadership in Organisation-BM-3102-Spring End Semester Examination-2016(Regular 2013-16 Admitted Batch & Back).pdf
+[2026-02-08 15:31:27] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/17817
+[2026-02-08 15:31:27] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/17817
+[2026-02-08 15:31:27] CHECK FILE → Public Leadership during the COVID-19 Pandemic Can Leadership Theories Explain It.pdf | MATCH = True
+[2026-02-08 15:31:27] DOWNLOAD SUCCESS → Public Leadership during the COVID-19 Pandemic Can Leadership Theories Explain It.pdf
+[2026-02-08 15:31:27] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/16518
+[2026-02-08 15:31:27] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/16518
+[2026-02-08 15:31:27] CHECK FILE → Thesis of Sadhna Susdershana.pdf | MATCH = False
+[2026-02-08 15:31:28] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/4031
+[2026-02-08 15:31:28] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/4031
+[2026-02-08 15:31:28] CHECK FILE → allam-raju-srirajkumar(2).pdf | MATCH = False
+[2026-02-08 15:31:29] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/7903
+[2026-02-08 15:31:29] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/7903
+[2026-02-08 15:31:29] CHECK FILE → ROLE_OF_ETHICS_IN_SPIRITUAL_LEADERSHIP.pdf | MATCH = True
+[2026-02-08 15:31:29] DOWNLOAD SUCCESS → ROLE_OF_ETHICS_IN_SPIRITUAL_LEADERSHIP.pdf
+[2026-02-08 15:31:29] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/10032
+[2026-02-08 15:31:29] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/10032
+[2026-02-08 15:31:29] CHECK FILE → Effect of Intrinsic Motivation on Employee Retention of Indian Gen Y Software Professionals.pdf | MATCH = False
+[2026-02-08 15:31:30] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/4368
+[2026-02-08 15:31:30] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/4368
+[2026-02-08 15:31:30] CHECK FILE → Behavioral Aspects of ERP Implementation A Conceptual Review.pdf | MATCH = False
+[2026-02-08 15:31:30] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/6625
+[2026-02-08 15:31:31] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/6625
+[2026-02-08 15:31:31] CHECK FILE → 6th Semester BBA-Leadership in Organization-BM-3102-Spring End Semester Examination-2017(Regular 2014-17 Admitted Batch & Back).pdf | MATCH = True
+[2026-02-08 15:31:31] DOWNLOAD SUCCESS → 6th Semester BBA-Leadership in Organization-BM-3102-Spring End Semester Examination-2017(Regular 2014-17 Admitted Batch & Back).pdf
+[2026-02-08 15:31:31] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/15232
+[2026-02-08 15:31:31] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/15232
+[2026-02-08 15:31:31] CHECK FILE → Impact of Organisational Commitment and Job Satisfaction.pdf | MATCH = False
+[2026-02-08 15:31:32] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/18841
+[2026-02-08 15:31:32] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/18841
+[2026-02-08 15:31:32] CHECK FILE → 1960072 - MIMANSA MISHRA.pdf | MATCH = False
+[2026-02-08 15:31:32] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/10612
+[2026-02-08 15:31:32] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/10612
+[2026-02-08 15:31:32] CHECK FILE → KISS Betta Tsemato Ambaw.pdf | MATCH = False
+[2026-02-08 15:31:33] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/18985
+[2026-02-08 15:31:33] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/18985
+[2026-02-08 15:31:33] CHECK FILE → 2261043- PRAGYAN SAHOO.pdf | MATCH = False
+[2026-02-08 15:31:34] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/20772
+[2026-02-08 15:31:34] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/20772
+[2026-02-08 15:31:34] CHECK FILE → Thesis of Pramod Kumar Misra.pdf | MATCH = False
+[2026-02-08 15:31:34] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/10600
+[2026-02-08 15:31:34] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/10600
+[2026-02-08 15:31:34] CHECK FILE → Management Yashaswini Mishra.pdf | MATCH = False
+[2026-02-08 15:31:35] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/3442
+[2026-02-08 15:31:35] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/3442
+[2026-02-08 15:31:35] CHECK FILE → Basanta Kumar Behera (5).pdf | MATCH = False
+[2026-02-08 15:31:35] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/7947
+[2026-02-08 15:31:35] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/7947
+[2026-02-08 15:31:35] CHECK FILE → Multilevel Leadership and Organizational Effectiveness in Indian Technical Education The Mediating Role of Communication, Power And Culture.pdf | MATCH = True
+[2026-02-08 15:31:36] DOWNLOAD SUCCESS → Multilevel Leadership and Organizational Effectiveness in Indian Technical Education The Mediating Role of Communication, Power And Culture.pdf
+[2026-02-08 15:31:36] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/20742
+[2026-02-08 15:31:36] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/20742
+[2026-02-08 15:31:36] CHECK FILE → Bimal Krushna Jena-Management.pdf | MATCH = False
+[2026-02-08 15:31:37] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/18874
+[2026-02-08 15:31:37] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/18874
+[2026-02-08 15:31:37] CHECK FILE → 1960102 - SHALINI ROY.pdf | MATCH = False
+[2026-02-08 15:31:37] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/17254
+[2026-02-08 15:31:37] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/17254
+[2026-02-08 15:31:37] CHECK FILE → 1-Vishakha Singhania final Thesis pdf.pdf | MATCH = False
+[2026-02-08 15:31:38] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/15317
+[2026-02-08 15:31:38] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/15317
+[2026-02-08 15:31:38] CHECK FILE → Leadership Lessons  from a Sinking Ship.pdf | MATCH = True
+[2026-02-08 15:31:38] DOWNLOAD SUCCESS → Leadership Lessons  from a Sinking Ship.pdf
+[2026-02-08 15:31:39] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/17854
+[2026-02-08 15:31:39] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/17854
+[2026-02-08 15:31:39] CHECK FILE → Introduction of newer strategies for the highest implementation of delayed umbilical cord clamping after caesarean birth (1) (1).pdf | MATCH = False
+[2026-02-08 15:31:39] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/16482
+[2026-02-08 15:31:39] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/16482
+[2026-02-08 15:31:40] CHECK FILE → 33-Final thesis PBN-30.4.2022-Revised-1.1-GM-4.pdf | MATCH = False
+[2026-02-08 15:31:40] REQUEST → http://10.2.0.84:8080/dspace/handle/123456789/16516
+[2026-02-08 15:31:40] PDF LINKS → 2 found in http://10.2.0.84:8080/dspace/handle/123456789/16516
+[2026-02-08 15:31:40] CHECK FILE → Thesis of Kumari Akriti.pdf | MATCH = False
+[2026-02-08 15:31:41] TOTAL TIME → 0.34 min
