@@ -1,0 +1,27 @@
+[2026-02-08 15:29:14] ===== START SCRAPE =====
+[2026-02-08 15:29:14] Searching term: HS 30225
+[2026-02-08 15:29:14] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=HS+30225
+[2026-02-08 15:29:14] Items found for HS 30225: 0
+[2026-02-08 15:29:14] Searching term: HS30225
+[2026-02-08 15:29:14] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=HS30225
+[2026-02-08 15:29:14] Items found for HS30225: 0
+[2026-02-08 15:29:15] Searching term: 30225
+[2026-02-08 15:29:15] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=30225
+[2026-02-08 15:29:15] Items found for 30225: 0
+[2026-02-08 15:29:16] Searching term: Leadership
+[2026-02-08 15:29:16] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=Leadership
+[2026-02-08 15:29:16] Items found for Leadership: 10
+[2026-02-08 15:29:17] Searching term: Team Effectiveness
+[2026-02-08 15:29:17] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=Team+Effectiveness
+[2026-02-08 15:29:17] Items found for Team Effectiveness: 10
+[2026-02-08 15:29:18] Searching term: Leadership Team
+[2026-02-08 15:29:18] Search URL: http://10.2.0.84:8080/dspace/simple-search?query=Leadership+Team
+[2026-02-08 15:29:18] Items found for Leadership Team: 8
+[2026-02-08 15:29:18] Total unique candidate items: 26
+[2026-02-08 15:29:19] MATCH FOUND: 6th Semester BBA-Leadership in Organization-BM-3102-Spring End Semester Examination-2017(Regular 2014-17 Admitted Batch & Back).pdf
+[2026-02-08 15:29:26] MATCH FOUND: ROLE_OF_ETHICS_IN_SPIRITUAL_LEADERSHIP.pdf
+[2026-02-08 15:29:29] MATCH FOUND: 6th Semester BBA-Leadership in Organisation-BM-3102-Spring End Semester Examination-2016(Regular 2013-16 Admitted Batch & Back).pdf
+[2026-02-08 15:29:33] MATCH FOUND: Multilevel Leadership and Organizational Effectiveness in Indian Technical Education The Mediating Role of Communication, Power And Culture.pdf
+[2026-02-08 15:29:35] MATCH FOUND: Public Leadership during the COVID-19 Pandemic Can Leadership Theories Explain It.pdf
+[2026-02-08 15:29:38] MATCH FOUND: Leadership Lessons  from a Sinking Ship.pdf
+[2026-02-08 15:29:41] ===== SCRAPE COMPLETE =====
