@@ -10,8 +10,8 @@ START_URL = "http://10.2.0.84:8080/dspace/handle/123456789/32"
 TARGET_COURSE = "HS 30225"
 
 SAVE_FOLDER = "downloads"
-DELAY = 1.5
-
+REQ_PER_SEC = 200   # <-- change this only
+DELAY = 1.0 / REQ_PER_SEC
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
 session = requests.Session()
