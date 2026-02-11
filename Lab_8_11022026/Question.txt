@@ -1,0 +1,16 @@
+Experiment
+
+Build an SVM model to classify handwritten digits using the MNIST dataset.
+
+Evaluation
+
+- Accuracy: Overall percentage of correct predictions.
+- Confusion Matrix: Provides a breakdown of correct/incorrect predictions for each digit.
+- Classification Report: Detailed precision, recall, and F1-score for each digit.
+
+Note
+
+The MNIST dataset consists of 70,000 grayscale images of handwritten digits (28x28 pixels)
+representing numbers from 0 to 9.
+
+We can use sklearn.datasets.fetch_openml to load the dataset.

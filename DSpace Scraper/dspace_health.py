@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from ping3 import ping
 
 TARGET = "10.2.0.84"   # change host here
-INTERVAL = 1           # seconds between pings
+INTERVAL = 0.00001           # seconds between pings
 WINDOW = 100           # points to keep on graph
 
 times = []
