@@ -1,0 +1,17 @@
+# Week 9: Principal Component Analysis (PCA)
+
+## Objective
+Reduce dimensionality using PCA.
+
+## Experiment
+Perform PCA on a high-dimensional dataset and visualize the results.
+
+### Outputs:
+- **Variance Proportion**: Displays the proportion of variance captured by each principal component.
+- **2D Plot**: Projects data onto the first two principal components.
+- **3D Plot**: Projects data onto the first three principal components.
+
+## Dataset
+Wine Dataset from the sklearn library
+- 13 features (high dimensionality) related to chemical properties of wine samples
+- Can be reduced to 2 or 3 principal components for visualization
