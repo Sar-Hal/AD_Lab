@@ -1,0 +1,10 @@
+# Week 8: K-Means Clustering
+## Objective
+Learn unsupervised learning through clustering.
+## Experiment
+Apply K-Means clustering to group customers based on purchasing patterns.
+### Tasks
+- Plot the clusters in 2D space (using scaled features) and mark the centroids.
+- Analyze each cluster to identify customer groups based on purchasing patterns:
+    - High-income, high-spending customers
+    - Low-income, low-spending customers
