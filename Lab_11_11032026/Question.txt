@@ -1,0 +1,32 @@
+# Week 10: Neural Networks with TensorFlow/Keras
+
+## Objective
+Introduce deep learning basics with neural networks.
+
+## Experiment
+Build a simple neural network to classify handwritten digits using TensorFlow/Keras.
+
+### Architecture Details
+- **Images**: Flattened from 28×28 matrices into 1D vectors of length 784
+
+- **Input Layer**: Flattened vector of size 784 (28×28)
+
+- **Hidden Layer**: Dense layer with 128 neurons and ReLU activation
+    - Allows the model to learn complex patterns
+
+- **Dropout Layer**: Dropout rate of 0.2
+    - Reduces overfitting by randomly zeroing weights during training
+
+- **Output Layer**: Softmax layer with 10 neurons
+    - Classifies digits 0-9
+
+## Evaluation Metrics
+- Test Accuracy
+- Model performance over epochs (accuracy plot)
+- Loss plot (indicates convergence)
+
+## Dataset
+**MNIST Dataset**
+- 60,000 training images
+- 10,000 test images
+- Handwritten digits (0-9)
