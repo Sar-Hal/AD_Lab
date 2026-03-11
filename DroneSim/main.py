@@ -30,7 +30,7 @@ window.color      = WORLD["sky_color"]
 
 
 # ── Build scene ───────────────────────────────────────────────
-ground, obstacles, rocks, bushes = build_world()
+ground, obstacles = build_world()
 drone = Drone()
 
 cam_ctrl = CameraController(drone)

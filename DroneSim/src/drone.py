@@ -104,9 +104,10 @@ class Drone(Entity):
         ]
         self.motors = []
         for pos in motor_positions:
+            # flat sphere approximates a motor can — cylinder isn't built into Ursina
             m = Entity(
-                parent=self, model='cylinder',
-                scale=(0.21, 0.10, 0.21),
+                parent=self, model='sphere',
+                scale=(0.21, 0.09, 0.21),
                 position=pos,
                 color=DC["motor"],
             )

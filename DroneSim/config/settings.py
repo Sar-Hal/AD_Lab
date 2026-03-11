@@ -6,15 +6,15 @@ from ursina import color
 
 # ── World ────────────────────────────────────────────────────
 WORLD = {
-    "sky_color":          color.rgb(100, 160, 220),   # daytime blue
+    "sky_color":          color.rgb(80, 140, 210),    # daytime blue
     "fog_color":          color.rgb(160, 200, 230),
     "fog_density":        0.006,
     "ground_scale":       180,
     "ground_color":       color.rgb(44, 130, 60),
     "ground_tex_scale":   (80, 80),
-    "num_obstacles":      18,
-    "obstacle_min_h":     3,
-    "obstacle_max_h":     12,
+    "num_obstacles":      28,
+    "obstacle_min_h":     4,
+    "obstacle_max_h":     15,
 }
 
 # ── Drone physics ────────────────────────────────────────────
@@ -51,9 +51,13 @@ ENV_COLORS = {
     # Tree canopy variation – sampled randomly
     "canopy":         [
         color.rgb(34,  110,  40),
-        color.rgb(26,  95,   35),
-        color.rgb(50,  130,  50),
-        color.rgb(20,  80,   30),
+        color.rgb(26,   95,  35),
+        color.rgb(50,  135,  52),
+        color.rgb(20,   80,  30),
+        color.rgb(60,  145,  55),
+        color.rgb(38,  118,  44),
+        color.rgb(15,   70,  25),   # dark understory
+        color.rgb(70,  155,  60),   # bright highlight
     ],
     "ground":          color.rgb(44,  130,  60),
     "ground_line":     color.rgb(30,  90,   40),   # texture grid tint
